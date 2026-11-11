@@ -1,0 +1,5 @@
+# Retro Spaceship
+# numpy is required for audio synthesis and fast particles. Without it the game
+# still runs, but starts silent and uses a slower particle path.
+pygame>=2.6
+numpy>=1.24

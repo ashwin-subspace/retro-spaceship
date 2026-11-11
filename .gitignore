@@ -1,0 +1,14 @@
+build/
+*.apk
+*.apk.idsig
+*.idsig
+*.keystore
+*.jks
+local.properties
+.env
+.idea/
+*.iml
+.DS_Store
+Thumbs.db
+__pycache__/
+*.pyc

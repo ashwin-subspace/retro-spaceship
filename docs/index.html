@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Retro Spaceship</title>
+<meta name="description" content="Retro Spaceship is a native Android bullet-hell. Drag to fly. The ship fires itself.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="accent-bar"></div>
+<div class="wrap">
+  <p class="kicker">Ashwin R.</p>
+  <h1>Aiming is moving.</h1>
+  <p>Retro Spaceship is a portrait bullet-hell for Android. The playfield is the whole screen. Drag anywhere to fly. The ship fires by itself, so where you put it is the aim. The hitbox is the tiny white dot at the centre, not the sprite.</p>
+  <p>A second finger is both abilities, so you never stop steering. Tap it for a bomb. Hold it for overdrive once the meter is full. Move slowly and the graze ring appears on its own. The only button is a small pause mark at the top, above the height the ship can reach.</p>
+
+  <div class="actions">
+    <a class="btn" href="https://github.com/ashwin-subspace/retro-spaceship/releases/latest/download/RetroSpaceship.apk">Download APK</a>
+  </div>
+  <p class="muted">Sideload <code>RetroSpaceship.apk</code>. The APK and the signing keystore stay out of git. The game asks for no permissions and runs offline.</p>
+
+  <h2>How a run feels</h2>
+  <table>
+    <thead>
+      <tr><th>Gesture</th><th>What it does</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Drag with one finger</td><td>Fly, relative to where you touched, so the finger never covers the ship.</td></tr>
+      <tr><td>Second finger, tap</td><td>Bomb. Clears the screen and turns every bullet into score.</td></tr>
+      <tr><td>Second finger, hold</td><td>Overdrive. Faster piercing shots and a score bonus, once the meter fills.</td></tr>
+      <tr><td>Move slowly</td><td>Precision. Grazing a bullet scores and charges overdrive.</td></tr>
+    </tbody>
+  </table>
+  <p>The ship is a mass with thrusters. It accelerates, banks, carries through a stop, and glides when you let go. Clear a wave untouched for a bonus and a free shield. Bosses arrive every five stages: Sentinel, Hive, and Warden. Clearing one offers three upgrade cards.</p>
+  <p>There is no difficulty setting. A director raises a floor each stage and rides a bounded offset on how you are actually playing. It stops adapting during a boss.</p>
+
+  <h2>Stack</h2>
+  <p>Native Java drawing to a <code>SurfaceView</code>. No game engine, no Gradle, no web view. <code>py tools/build_apk.py</code> runs aapt2, javac, d8 and apksigner. Touch is queued on the UI thread and drained once per frame. Music is synthesised on the device. Four themes recolour the same white sprites.</p>
+  <p>Artwork, sound, and fonts are CC0 by <a href="https://kenney.nl">Kenney</a>: Simple Space, Space Shooter Extension, Alien UFO Pack, Planets, Sci-Fi Sounds, Interface Sounds, and Kenney Fonts. Those notices live in <code>assets_src</code>.</p>
+
+  <footer>
+    <p>Retro Spaceship by Ashwin R. MIT License, Copyright (c) 2026 Ashwin R. Kenney assets are CC0.</p>
+  </footer>
+</div>
+</body>
+</html>
